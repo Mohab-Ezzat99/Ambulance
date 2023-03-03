@@ -11,18 +11,28 @@ public class HospitalModel {
     private String phone;
     private int bedsNumber;
     private int roomsNumber;
+    private int bloodsNumber;
     private double roomPrice;
     private double lat;
     private double lng;
 
-    public HospitalModel(String name, String phone, int bedsNumber, int roomsNumber, Double roomPrice, Double lat, Double lng) {
+    public HospitalModel(String name, String phone, int bedsNumber, int roomsNumber, int bloodsNumber, double roomPrice, double lat, double lng) {
         this.name = name;
         this.phone = phone;
         this.bedsNumber = bedsNumber;
         this.roomsNumber = roomsNumber;
+        this.bloodsNumber = bloodsNumber;
         this.roomPrice = roomPrice;
         this.lat = lat;
         this.lng = lng;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -57,27 +67,35 @@ public class HospitalModel {
         this.roomsNumber = roomsNumber;
     }
 
-    public Double getRoomPrice() {
+    public int getBloodsNumber() {
+        return bloodsNumber;
+    }
+
+    public void setBloodsNumber(int bloodsNumber) {
+        this.bloodsNumber = bloodsNumber;
+    }
+
+    public double getRoomPrice() {
         return roomPrice;
     }
 
-    public void setRoomPrice(Double roomPrice) {
+    public void setRoomPrice(double roomPrice) {
         this.roomPrice = roomPrice;
     }
 
-    public Double getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setLat(Double lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
-    public Double getLng() {
+    public double getLng() {
         return lng;
     }
 
-    public void setLng(Double lng) {
+    public void setLng(double lng) {
         this.lng = lng;
     }
 
