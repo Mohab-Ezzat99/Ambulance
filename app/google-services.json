@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "680319879546",
-    "project_id": "attendance-c6479",
-    "storage_bucket": "attendance-c6479.appspot.com"
+    "project_number": "165476410647",
+    "project_id": "ambulance-b6fc0",
+    "storage_bucket": "ambulance-b6fc0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:680319879546:android:9ee0b2d6807565e63b6ec3",
+        "mobilesdk_app_id": "1:165476410647:android:a376d88daa5db782fdc352",
         "android_client_info": {
-          "package_name": "mrandroid.attendance"
+          "package_name": "mrandroid.ambulance"
         }
       },
       "oauth_client": [
         {
-          "client_id": "680319879546-87qi6tp4hpng0791mf8mmqkh9prbprvv.apps.googleusercontent.com",
+          "client_id": "165476410647-8cj07ca99jv3cu8glnkc6bvll6pcsr2i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD5g_Mcueno9qFxrSQ17fR32ocedMDk1DE"
+          "current_key": "AIzaSyASa8jNxyrjpqX1A-UWSOMIV1Iyl3m8cLg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "680319879546-87qi6tp4hpng0791mf8mmqkh9prbprvv.apps.googleusercontent.com",
+              "client_id": "165476410647-8cj07ca99jv3cu8glnkc6bvll6pcsr2i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

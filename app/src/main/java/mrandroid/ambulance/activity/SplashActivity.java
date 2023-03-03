@@ -1,4 +1,4 @@
-package mrandroid.attendance.activity;
+package mrandroid.ambulance.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -9,8 +9,8 @@ import android.view.animation.AnimationUtils;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import mrandroid.attendance.R;
-import mrandroid.attendance.databinding.ActivitySplashBinding;
+import mrandroid.ambulance.R;
+import mrandroid.ambulance.databinding.ActivitySplashBinding;
 
 public class SplashActivity extends AppCompatActivity {
 
