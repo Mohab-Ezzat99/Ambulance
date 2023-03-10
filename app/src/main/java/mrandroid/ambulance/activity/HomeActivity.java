@@ -1,10 +1,15 @@
 package mrandroid.ambulance.activity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.location.LocationServices;
@@ -62,15 +67,51 @@ public class HomeActivity extends AppCompatActivity implements EasyPermissions.P
         mMap = googleMap;
         mMap.setOnMarkerClickListener(this);
         boolean hasLocationPermission = LocationPermission.requestLocationPermission(this);
-        if (hasLocationPermission) {
+        if (hasLocationPermission && checkGpsEnabled()) {
             fetchCurrentLocation();
             drawHospitalsMarkers();
         }
     }
 
+    private boolean checkGpsEnabled() {
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            AlertDialog dialog = new AlertDialog.Builder(this)
+                    .setMessage("Your GPS seems to be disabled, do you want to enable it?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", (dialogInterface, i) -> {
+                        startActivityForResult(
+                                new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS),
+                                200
+                        );
+                    })
+                    .setNegativeButton("No", (dialogInterface, i) -> {
+                        dialogInterface.cancel();
+                    })
+                    .create();
+            dialog.show();
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 200) {
+            if (checkGpsEnabled()) {
+                fetchCurrentLocation();
+                drawHospitalsMarkers();
+            }
+        }
+    }
+
     @Override
     public void onPermissionsGranted(int requestCode, @NonNull List<String> perms) {
-        drawHospitalsMarkers();
+        if (checkGpsEnabled()) {
+            fetchCurrentLocation();
+            drawHospitalsMarkers();
+        }
     }
 
     @Override
@@ -91,8 +132,10 @@ public class HomeActivity extends AppCompatActivity implements EasyPermissions.P
         LocationServices.getFusedLocationProviderClient(this)
                 .getLastLocation()
                 .addOnSuccessListener(location -> {
-                    currentLocation = new LatLng(location.getLatitude(), location.getLongitude());
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 15f));
+                    if (location != null) {
+                        currentLocation = new LatLng(location.getLatitude(), location.getLongitude());
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 15f));
+                    }
                 });
     }
 
@@ -114,6 +157,7 @@ public class HomeActivity extends AppCompatActivity implements EasyPermissions.P
     }
 
     private void getTheNearestHospital() {
+        if(currentLocation==null) return;
         ArrayList<Double> allDistances = new ArrayList<>();
         HashMap<Double, HospitalModel> distanceWithHospital = new HashMap<>();
         for (HospitalModel hospital : hospitals) {
