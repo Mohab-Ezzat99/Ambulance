@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Attendance</string>
+    <string name="app_name">Ambulance</string>
     <string name="map_api_key" translatable="false">AIzaSyBF575OcVZ1XYTqcFX9-JAA0ZVf4uy52Do</string>
 </resources>

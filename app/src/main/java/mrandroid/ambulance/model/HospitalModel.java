@@ -5,7 +5,10 @@ import android.os.Parcelable;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.io.Serializable;
+import java.util.Arrays;
 
 @Entity
 public class HospitalModel implements Serializable {
@@ -103,7 +106,24 @@ public class HospitalModel implements Serializable {
         this.lng = lng;
     }
 
-    public double getDistanceFromLocation(double lat, double lng) {
-        return 0.0;
+    public double getDistanceFromLocation(LatLng currentLocation) {
+        double theta = currentLocation.longitude - lng;
+        double dist = Math.sin(deg2rad(currentLocation.latitude))
+                * Math.sin(deg2rad(lat))
+                + Math.cos(deg2rad(currentLocation.latitude))
+                * Math.cos(deg2rad(lat))
+                * Math.cos(deg2rad(theta));
+        dist = Math.acos(dist);
+        dist = rad2deg(dist);
+        dist = dist * 60 * 1.1515;
+        return (dist);
+    }
+
+    private double deg2rad(double deg) {
+        return (deg * Math.PI / 180.0);
+    }
+
+    private double rad2deg(double rad) {
+        return (rad * 180.0 / Math.PI);
     }
 }

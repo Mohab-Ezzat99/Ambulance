@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.2"
-            app:srcCompat="@drawable/pic_icon" />
+            app:srcCompat="@drawable/ic_logo" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/itl_email"

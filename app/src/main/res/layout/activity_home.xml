@@ -17,4 +17,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabHospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/fabMyLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_hospital" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="@dimen/_16sdp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_my_location" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
