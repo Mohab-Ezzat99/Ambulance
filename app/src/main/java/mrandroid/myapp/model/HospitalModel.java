@@ -1,6 +1,4 @@
-package mrandroid.ambulance.model;
-
-import android.os.Parcelable;
+package mrandroid.myapp.model;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -8,7 +6,6 @@ import androidx.room.PrimaryKey;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.io.Serializable;
-import java.util.Arrays;
 
 @Entity
 public class HospitalModel implements Serializable {

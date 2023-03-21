@@ -1,4 +1,4 @@
-package mrandroid.ambulance;
+package mrandroid.myapp;
 
 import android.app.Application;
 
@@ -8,9 +8,9 @@ import java.util.List;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.schedulers.Schedulers;
-import mrandroid.ambulance.database.AppDB;
-import mrandroid.ambulance.database.AppDao;
-import mrandroid.ambulance.model.HospitalModel;
+import mrandroid.myapp.database.AppDB;
+import mrandroid.myapp.database.AppDao;
+import mrandroid.myapp.model.HospitalModel;
 
 public class Repository {
     private final AppDao appDao;

@@ -1,4 +1,4 @@
-package mrandroid.ambulance.activity;
+package mrandroid.myapp.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -6,10 +6,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Locale;
-
-import mrandroid.ambulance.databinding.ActivityHospitalBinding;
-import mrandroid.ambulance.model.HospitalModel;
+import mrandroid.myapp.databinding.ActivityHospitalBinding;
+import mrandroid.myapp.model.HospitalModel;
 
 public class HospitalActivity extends AppCompatActivity {
 
@@ -23,7 +21,7 @@ public class HospitalActivity extends AppCompatActivity {
 
         HospitalModel hospital = (HospitalModel) getIntent().getSerializableExtra("hospital");
         binding.tvName.setText(hospital.getName());
-        binding.tvRooms.setText(hospital.getRoomsNumber() + "  Rooms");
+        binding.tvRooms.setText(hospital.getRoomsNumber() + "  Rooms,  "+ hospital.getRoomPrice() + " EGP per room");
         binding.tvBeds.setText(hospital.getBedsNumber() + "  Beds");
         binding.tvBlood.setText(hospital.getBloodsNumber() + "  Bloods");
         binding.btnCallAmbulance.setText("Call  " + hospital.getPhone());

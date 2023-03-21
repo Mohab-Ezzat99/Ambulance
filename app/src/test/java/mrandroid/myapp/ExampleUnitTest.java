@@ -1,4 +1,4 @@
-package mrandroid.ambulance;
+package mrandroid.myapp;
 
 import org.junit.Test;
 

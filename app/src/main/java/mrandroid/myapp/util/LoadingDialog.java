@@ -1,8 +1,8 @@
-package mrandroid.ambulance.util;
+package mrandroid.myapp.util;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import mrandroid.ambulance.R;
+import mrandroid.myapp.R;
 
 public class LoadingDialog {
 

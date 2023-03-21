@@ -1,4 +1,4 @@
-package mrandroid.ambulance.database;
+package mrandroid.myapp.database;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import java.util.List;
 import io.reactivex.rxjava3.core.Completable;
-import mrandroid.ambulance.model.HospitalModel;
+import mrandroid.myapp.model.HospitalModel;
 
 @Dao
 public interface AppDao {

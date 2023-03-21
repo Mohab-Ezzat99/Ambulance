@@ -1,4 +1,4 @@
-package mrandroid.ambulance.util;
+package mrandroid.myapp.util;
 
 import android.Manifest;
 import android.app.Activity;

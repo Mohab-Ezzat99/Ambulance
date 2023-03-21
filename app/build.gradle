@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'mrandroid.ambulance'
+    namespace 'mrandroid.myapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "mrandroid.ambulance"
+        applicationId "mrandroid.myapp"
         minSdk 21
         targetSdk 33
         versionCode 1

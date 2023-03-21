@@ -1,4 +1,4 @@
-package mrandroid.ambulance.activity;
+package mrandroid.myapp.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -26,11 +26,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import mrandroid.ambulance.R;
-import mrandroid.ambulance.databinding.ActivityHomeBinding;
-import mrandroid.ambulance.model.HospitalModel;
-import mrandroid.ambulance.util.Info;
-import mrandroid.ambulance.util.LocationPermission;
+import mrandroid.myapp.R;
+import mrandroid.myapp.databinding.ActivityHomeBinding;
+import mrandroid.myapp.model.HospitalModel;
+import mrandroid.myapp.util.Info;
+import mrandroid.myapp.util.LocationPermission;
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 

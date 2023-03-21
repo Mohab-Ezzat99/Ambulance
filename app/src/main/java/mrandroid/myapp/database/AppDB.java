@@ -1,11 +1,11 @@
-package mrandroid.ambulance.database;
+package mrandroid.myapp.database;
 
 import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
-import mrandroid.ambulance.model.HospitalModel;
+import mrandroid.myapp.model.HospitalModel;
 
 @Database(
         entities = {HospitalModel.class},

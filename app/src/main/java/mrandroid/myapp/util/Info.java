@@ -1,8 +1,8 @@
-package mrandroid.ambulance.util;
+package mrandroid.myapp.util;
 
 import java.util.ArrayList;
 
-import mrandroid.ambulance.model.HospitalModel;
+import mrandroid.myapp.model.HospitalModel;
 
 public class Info {
 

@@ -1,4 +1,4 @@
-package mrandroid.ambulance;
+package mrandroid.myapp;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -7,7 +7,7 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import mrandroid.ambulance.model.HospitalModel;
+import mrandroid.myapp.model.HospitalModel;
 
 public class ViewModel extends AndroidViewModel {
 

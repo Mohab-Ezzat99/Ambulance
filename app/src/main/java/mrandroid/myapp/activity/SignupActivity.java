@@ -1,4 +1,4 @@
-package mrandroid.ambulance.activity;
+package mrandroid.myapp.activity;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-import mrandroid.ambulance.databinding.ActivitySignupBinding;
-import mrandroid.ambulance.util.LoadingDialog;
+import mrandroid.myapp.databinding.ActivitySignupBinding;
+import mrandroid.myapp.util.LoadingDialog;
 
 public class SignupActivity extends AppCompatActivity {
 
